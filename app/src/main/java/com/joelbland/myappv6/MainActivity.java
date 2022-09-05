@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -17,9 +19,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-
+        Button bt = findViewById(R.id.button);
+        bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 TextView tv = findViewById(R.id.tv_1);
@@ -28,8 +29,11 @@ public class MainActivity extends AppCompatActivity {
                 Integer newValue = MyHelper.doubleMyValue(originalValue);
                 tv.setText(newValue.toString());
             }
-
-
         });
+
+
+
+
+
     }
 }
